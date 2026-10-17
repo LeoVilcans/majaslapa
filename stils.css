@@ -1,0 +1,94 @@
+header {
+    border: 1px solid black;
+    border-radius: 3px 3px 0px 0px;
+
+    padding-left: 20px;
+
+    height: 180px;
+
+    display: flex;
+    justify-content: space-between;
+
+    & h1 {
+        font-size: 70px;
+    }
+
+    & h1:has(+ p) {
+        margin-bottom: 0px;
+        margin-top: 30px;
+        padding-bottom: 0px;
+    }
+
+    & p {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    & p:before {
+        content: "- ";
+    }
+
+    & img {
+        height: 180px;
+        width: auto;
+        border-left: 1px solid black;
+        background: white;
+    }
+
+    background: url("namebg2.png");
+    background-size: 128px 128px;
+}
+
+.navbar {
+    border: 1px solid black;
+    border-top: none;
+    border-radius: 0px 0px 3px 3px;
+    padding-left: 20px;
+    padding-bottom: 2px;
+
+    & a {
+        color: blue;
+    }
+
+    & a:not(:last-child):after {
+        margin-left: 10px;
+        margin-right: 6px;
+        content: "-";
+        display:inline-block;
+        color: black;
+    }
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+
+    & h1:has(+ p, + ul, + h2, + h3) {
+        margin-bottom: 0px;
+    }
+
+    & h2:has(+ p, + ul, + h2, + h3) {
+        margin-bottom: 0px;
+    }
+
+    & li h2 {
+        margin-top: 5px;
+    }
+
+    & p {
+        margin-top: 5px;
+    }
+
+    & ul {
+        margin-top: 0px;
+    }
+
+    & hr {
+        margin-right: 20px;
+        margin-left: 20px;
+        border: none;
+        border-top: 2px solid lightgray;
+    }
+
+    max-width: 1000px;
+}
